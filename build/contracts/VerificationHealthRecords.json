@@ -1,0 +1,1562 @@
+{
+  "contractName": "VerificationHealthRecords",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "creator",
+          "type": "address"
+        }
+      ],
+      "name": "AddedHealthRecordVerification",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "creator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "name": "SendTest",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "ownerAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "txHash",
+          "type": "string"
+        }
+      ],
+      "name": "addVerification",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "creator",
+          "type": "address"
+        }
+      ],
+      "name": "checkIsVerification",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "name": "testSendTransaction",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"creator\",\"type\":\"address\"}],\"name\":\"AddedHealthRecordVerification\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"creator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"}],\"name\":\"SendTest\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"id\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"ownerAddress\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"txHash\",\"type\":\"string\"}],\"name\":\"addVerification\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"id\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"creator\",\"type\":\"address\"}],\"name\":\"checkIsVerification\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"}],\"name\":\"testSendTransaction\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/VerificationHealthRecords.sol\":\"VerificationHealthRecords\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[],\"viaIR\":true},\"sources\":{\"project:/contracts/VerificationHealthRecords.sol\":{\"keccak256\":\"0xa61a9b847cd865125b07f5e9d8dd6ec11f71bff8aefdb91d8117bc8790dd6b1e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://284c86cd1374d1fd593575d484cdfd8409365a171055e3d38215b1d21e031a41\",\"dweb:/ipfs/Qmdg8jsANZMzXUWDxVsnApbdEgS6NatXtZrvbh94xfTPSJ\"]}},\"version\":1}",
+  "bytecode": "0x60808060405234610016576106f1908161001c8239f35b600080fdfe608060405260048036101561001357600080fd5b60003560e01c80632221f89b14610148578063a506b4f2146100cb5763f567ac7f1461003e57600080fd5b346100c65760203660031901126100c65780356001600160401b0381116100c6577fea444dd7122a2566183a7902fbb509c213d7483f822bb6b81bbf91381565c7e99161008d91369101610609565b60606040518092338252604060208301526100b78151809281604086015260208686019101610698565b601f01601f19168101030190a1005b600080fd5b50346100c65760403660031901126100c6578035906001600160401b0382116100c657610133602061010360ff938295369101610609565b6001600160a01b03610113610682565b166000526001825260406000208260405194838680955193849201610698565b82019081520301902054166040519015158152f35b50346100c65760603660031901126100c65780356001600160401b0381116100c6576101779036908301610609565b90610180610682565b906044356001600160401b0381116100c65761019f9036908301610609565b33600052600160205260ff60406000206020604051809288516101c58184868d01610698565b82019081520301902054166105cc57336000526000602052604060002090604051936060850185811060018060401b0382111761058d5760409081528686526001600160a01b03919091166020860152840152805490600160401b8210156105b757600182018082558210156105a257600052602060002090835180519060018060401b03821161058d5760038302840154600181811c91168015610583575b602082101461056e57601f8111610521575b50602090601f83116001146104a75792826040959360039360029660009261049c575b50508160011b9160001990851b1c1916178282028401555b600182820284010160018060a01b0360208901511660018060a01b031982541617905502010192015180519160018060401b03831161048757835490600182811c9216801561047d575b60208310146104685750601f8111610420575b50602090601f83116001146103b15791806020949261036696946000926103a6575b50508160011b916000199060031b1c19161790555b336000526001825260406000208260405194838680955193849201610698565b820190815203019020600160ff198254161790557f385cdb07e69bed1f70f3d0b9a8b29228db4d5a0b125203028ccf2abe1cbf27f56020604051338152a1005b015190503880610331565b90601f198316918460005260206000209260005b8181106104085750926001928592610366989660209896106103ef575b505050811b019055610346565b015160001960f88460031b161c191690553880806103e2565b929360206001819287860151815501950193016103c5565b836000526020600020601f840160051c8101916020851061045e575b601f0160051c01905b818110610452575061030f565b60008155600101610445565b909150819061043c565b602290634e487b7160e01b6000525260246000fd5b91607f16916102fc565b604190634e487b7160e01b6000525260246000fd5b01519050388061029a565b9060038402850160005260206000209160005b601f19851681106105095750836003936002969360019360409997601f198116106104f1575b505050811b018282028401556102b2565b015160001983871b60f8161c191690553880806104e0565b919260206001819286850151815501940192016104ba565b6003840285016000526020600020601f840160051c81019160208510610564575b601f0160051c01905b8181106105585750610277565b6000815560010161054b565b9091508190610542565b602286634e487b7160e01b6000525260246000fd5b90607f1690610265565b604185634e487b7160e01b6000525260246000fd5b603283634e487b7160e01b6000525260246000fd5b604183634e487b7160e01b6000525260246000fd5b60405162461bcd60e51b815260208184015260166024820152754944207375646168207465727665726966696b61736960501b6044820152606490fd5b81601f820112156100c6576001600160401b03918135919083831161066c5760405193601f8401601f19908116603f011685019081118582101761066c57604052828452602083830101116100c657816000926020809301838601378301015290565b634e487b7160e01b600052604160045260246000fd5b602435906001600160a01b03821682036100c657565b60005b8381106106ab5750506000910152565b818101518382015260200161069b56fea264697066735822122021d320b568bcaad85b43130cdb9d8b13ec7ef7020c916971423a157957f1fbf964736f6c63430008130033",
+  "deployedBytecode": "0x608060405260048036101561001357600080fd5b60003560e01c80632221f89b14610148578063a506b4f2146100cb5763f567ac7f1461003e57600080fd5b346100c65760203660031901126100c65780356001600160401b0381116100c6577fea444dd7122a2566183a7902fbb509c213d7483f822bb6b81bbf91381565c7e99161008d91369101610609565b60606040518092338252604060208301526100b78151809281604086015260208686019101610698565b601f01601f19168101030190a1005b600080fd5b50346100c65760403660031901126100c6578035906001600160401b0382116100c657610133602061010360ff938295369101610609565b6001600160a01b03610113610682565b166000526001825260406000208260405194838680955193849201610698565b82019081520301902054166040519015158152f35b50346100c65760603660031901126100c65780356001600160401b0381116100c6576101779036908301610609565b90610180610682565b906044356001600160401b0381116100c65761019f9036908301610609565b33600052600160205260ff60406000206020604051809288516101c58184868d01610698565b82019081520301902054166105cc57336000526000602052604060002090604051936060850185811060018060401b0382111761058d5760409081528686526001600160a01b03919091166020860152840152805490600160401b8210156105b757600182018082558210156105a257600052602060002090835180519060018060401b03821161058d5760038302840154600181811c91168015610583575b602082101461056e57601f8111610521575b50602090601f83116001146104a75792826040959360039360029660009261049c575b50508160011b9160001990851b1c1916178282028401555b600182820284010160018060a01b0360208901511660018060a01b031982541617905502010192015180519160018060401b03831161048757835490600182811c9216801561047d575b60208310146104685750601f8111610420575b50602090601f83116001146103b15791806020949261036696946000926103a6575b50508160011b916000199060031b1c19161790555b336000526001825260406000208260405194838680955193849201610698565b820190815203019020600160ff198254161790557f385cdb07e69bed1f70f3d0b9a8b29228db4d5a0b125203028ccf2abe1cbf27f56020604051338152a1005b015190503880610331565b90601f198316918460005260206000209260005b8181106104085750926001928592610366989660209896106103ef575b505050811b019055610346565b015160001960f88460031b161c191690553880806103e2565b929360206001819287860151815501950193016103c5565b836000526020600020601f840160051c8101916020851061045e575b601f0160051c01905b818110610452575061030f565b60008155600101610445565b909150819061043c565b602290634e487b7160e01b6000525260246000fd5b91607f16916102fc565b604190634e487b7160e01b6000525260246000fd5b01519050388061029a565b9060038402850160005260206000209160005b601f19851681106105095750836003936002969360019360409997601f198116106104f1575b505050811b018282028401556102b2565b015160001983871b60f8161c191690553880806104e0565b919260206001819286850151815501940192016104ba565b6003840285016000526020600020601f840160051c81019160208510610564575b601f0160051c01905b8181106105585750610277565b6000815560010161054b565b9091508190610542565b602286634e487b7160e01b6000525260246000fd5b90607f1690610265565b604185634e487b7160e01b6000525260246000fd5b603283634e487b7160e01b6000525260246000fd5b604183634e487b7160e01b6000525260246000fd5b60405162461bcd60e51b815260208184015260166024820152754944207375646168207465727665726966696b61736960501b6044820152606490fd5b81601f820112156100c6576001600160401b03918135919083831161066c5760405193601f8401601f19908116603f011685019081118582101761066c57604052828452602083830101116100c657816000926020809301838601378301015290565b634e487b7160e01b600052604160045260246000fd5b602435906001600160a01b03821682036100c657565b60005b8381106106ab5750506000910152565b818101518382015260200161069b56fea264697066735822122021d320b568bcaad85b43130cdb9d8b13ec7ef7020c916971423a157957f1fbf964736f6c63430008130033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "58:1630:1:-:0;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "58:1630:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;58:1630:1;;;;;;-1:-1:-1;;;;;58:1630:1;;;;1650:29;58:1630;;;;;;;:::i;:::-;;;;1659:10;;;58:1630;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;-1:-1:-1;;58:1630:1;;;1650:29;;;;58:1630;;;;;;;;;;;;-1:-1:-1;;58:1630:1;;;;;;;-1:-1:-1;;;;;58:1630:1;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;58:1630:1;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;58:1630:1;;;;;;-1:-1:-1;;;;;58:1630:1;;;;;;;;;;;:::i;:::-;;;;:::i;:::-;;;;-1:-1:-1;;;;;58:1630:1;;;;;;;;;;;:::i;:::-;854:10;58:1630;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;854:10;58:1630;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;58:1630:1;;;;;1021:133;;58:1630;1021:133;;58:1630;;;;-1:-1:-1;;;58:1630:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1021:133;;58:1630;;;;;;;;;;;;;;;;;1021:133;;58:1630;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;854:10;58:1630;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1228:41;58:1630;;;854:10;58:1630;;1228:41;58:1630;;;;;-1:-1:-1;58:1630:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;58:1630:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;58:1630:1;;;;;;;;;;;;;;;;;;;-1:-1:-1;;58:1630:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;58:1630:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;58:1630:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;58:1630:1;;;;;;;;;;;;-1:-1:-1;;;58:1630:1;;;;;;;;;;;;;;;;-1:-1:-1;;;;;58:1630:1;;;;;;;;;;;;;;;;-1:-1:-1;;58:1630:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;58:1630:1;;;;;;;;;;;;;;:::o;:::-;;;;-1:-1:-1;58:1630:1;;;;;-1:-1:-1;58:1630:1;;;;;-1:-1:-1;;;;;58:1630:1;;;;;;:::o;:::-;;;;;;;;-1:-1:-1;;58:1630:1;;;;:::o;:::-;;;;;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.19;\n\ncontract VerificationHealthRecords {\n    // Data untuk catatan kesehatan\n    struct HealthRecordVerification {\n        string id;       // id catatan kesehatan\n        address owner;   // address pemilik catatan kesehatan\n        string txHash;   // hash transaksi\n    }\n\n    struct SenderVerification {\n        HealthRecordVerification[] verifications;\n    }\n    \n    // Events\n    event AddedHealthRecordVerification(address creator); \n\n    // Mapping\n    mapping(address => SenderVerification) private senderVerifications;\n    mapping(address => mapping(string => bool)) private isVerification;\n\n    // Melakukan pendaftaran user\n    function addVerification(\n        string memory id, \n        address ownerAddress,\n        string memory txHash\n    ) public {\n        require(!isVerification[msg.sender][id], \"ID sudah terverifikasi\");\n        // Periksa apakah pengirim adalah creator\n\n        senderVerifications[msg.sender].verifications.push(\n            HealthRecordVerification({\n                id: id,\n                owner: ownerAddress,\n                txHash: txHash\n            })\n        );\n\n        isVerification[msg.sender][id] = true;\n\n        emit AddedHealthRecordVerification(msg.sender);\n    }\n\n    // Periksa apakah ID sudah terverifikasi\n    function checkIsVerification(string memory id, address creator) public view returns (bool) {\n        return isVerification[creator][id];\n    }\n\n    // Fungsi ini hanya untuk tujuan pengujian\n    event SendTest(address creator, string message); \n    function testSendTransaction(string memory message) public {\n        emit SendTest(msg.sender, message);\n    }\n}\n",
+  "sourcePath": "C:\\Users\\ASUS\\Documents\\File Kuliah\\Semester 8\\Tugas Akhir\\Backend\\contracts\\VerificationHealthRecords.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/VerificationHealthRecords.sol",
+    "exportedSymbols": {
+      "VerificationHealthRecords": [
+        2073
+      ]
+    },
+    "id": 2074,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1963,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "VerificationHealthRecords",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 2073,
+        "linearizedBaseContracts": [
+          2073
+        ],
+        "name": "VerificationHealthRecords",
+        "nameLocation": "67:25:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "VerificationHealthRecords.HealthRecordVerification",
+            "id": 1970,
+            "members": [
+              {
+                "constant": false,
+                "id": 1965,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "184:2:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 1970,
+                "src": "177:9:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1964,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "177:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1967,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "234:5:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 1970,
+                "src": "226:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1966,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "226:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1969,
+                "mutability": "mutable",
+                "name": "txHash",
+                "nameLocation": "295:6:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 1970,
+                "src": "288:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1968,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "288:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "HealthRecordVerification",
+            "nameLocation": "142:24:1",
+            "nodeType": "StructDefinition",
+            "scope": 2073,
+            "src": "135:193:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "VerificationHealthRecords.SenderVerification",
+            "id": 1975,
+            "members": [
+              {
+                "constant": false,
+                "id": 1974,
+                "mutability": "mutable",
+                "name": "verifications",
+                "nameLocation": "397:13:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 1975,
+                "src": "370:40:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_HealthRecordVerification_$1970_storage_$dyn_storage_ptr",
+                  "typeString": "struct VerificationHealthRecords.HealthRecordVerification[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 1972,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1971,
+                      "name": "HealthRecordVerification",
+                      "nameLocations": [
+                        "370:24:1"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1970,
+                      "src": "370:24:1"
+                    },
+                    "referencedDeclaration": 1970,
+                    "src": "370:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_HealthRecordVerification_$1970_storage_ptr",
+                      "typeString": "struct VerificationHealthRecords.HealthRecordVerification"
+                    }
+                  },
+                  "id": 1973,
+                  "nodeType": "ArrayTypeName",
+                  "src": "370:26:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_HealthRecordVerification_$1970_storage_$dyn_storage_ptr",
+                    "typeString": "struct VerificationHealthRecords.HealthRecordVerification[]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "SenderVerification",
+            "nameLocation": "341:18:1",
+            "nodeType": "StructDefinition",
+            "scope": 2073,
+            "src": "334:83:1",
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "385cdb07e69bed1f70f3d0b9a8b29228db4d5a0b125203028ccf2abe1cbf27f5",
+            "id": 1979,
+            "name": "AddedHealthRecordVerification",
+            "nameLocation": "447:29:1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1978,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1977,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "creator",
+                  "nameLocation": "485:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1979,
+                  "src": "477:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1976,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "477:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "476:17:1"
+            },
+            "src": "441:53:1"
+          },
+          {
+            "constant": false,
+            "id": 1984,
+            "mutability": "mutable",
+            "name": "senderVerifications",
+            "nameLocation": "563:19:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 2073,
+            "src": "516:66:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_SenderVerification_$1975_storage_$",
+              "typeString": "mapping(address => struct VerificationHealthRecords.SenderVerification)"
+            },
+            "typeName": {
+              "id": 1983,
+              "keyName": "",
+              "keyNameLocation": "-1:-1:-1",
+              "keyType": {
+                "id": 1980,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "524:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "516:38:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_SenderVerification_$1975_storage_$",
+                "typeString": "mapping(address => struct VerificationHealthRecords.SenderVerification)"
+              },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
+              "valueType": {
+                "id": 1982,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 1981,
+                  "name": "SenderVerification",
+                  "nameLocations": [
+                    "535:18:1"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 1975,
+                  "src": "535:18:1"
+                },
+                "referencedDeclaration": 1975,
+                "src": "535:18:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_SenderVerification_$1975_storage_ptr",
+                  "typeString": "struct VerificationHealthRecords.SenderVerification"
+                }
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 1990,
+            "mutability": "mutable",
+            "name": "isVerification",
+            "nameLocation": "640:14:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 2073,
+            "src": "588:66:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_string_memory_ptr_$_t_bool_$_$",
+              "typeString": "mapping(address => mapping(string => bool))"
+            },
+            "typeName": {
+              "id": 1989,
+              "keyName": "",
+              "keyNameLocation": "-1:-1:-1",
+              "keyType": {
+                "id": 1985,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "596:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "588:43:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_string_memory_ptr_$_t_bool_$_$",
+                "typeString": "mapping(address => mapping(string => bool))"
+              },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
+              "valueType": {
+                "id": 1988,
+                "keyName": "",
+                "keyNameLocation": "-1:-1:-1",
+                "keyType": {
+                  "id": 1986,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "615:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "607:23:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bool_$",
+                  "typeString": "mapping(string => bool)"
+                },
+                "valueName": "",
+                "valueNameLocation": "-1:-1:-1",
+                "valueType": {
+                  "id": 1987,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "625:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                }
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 2037,
+              "nodeType": "Block",
+              "src": "820:456:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 2006,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "838:31:1",
+                        "subExpression": {
+                          "baseExpression": {
+                            "baseExpression": {
+                              "id": 2000,
+                              "name": "isVerification",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1990,
+                              "src": "839:14:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_string_memory_ptr_$_t_bool_$_$",
+                                "typeString": "mapping(address => mapping(string memory => bool))"
+                              }
+                            },
+                            "id": 2003,
+                            "indexExpression": {
+                              "expression": {
+                                "id": 2001,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 4294967281,
+                                "src": "854:3:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 2002,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "858:6:1",
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "src": "854:10:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "839:26:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bool_$",
+                              "typeString": "mapping(string memory => bool)"
+                            }
+                          },
+                          "id": 2005,
+                          "indexExpression": {
+                            "id": 2004,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1992,
+                            "src": "866:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "839:30:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "4944207375646168207465727665726966696b617369",
+                        "id": 2007,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "871:24:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c537c1bc4245deba9c9839fc69546b991160a3570d9180ad09e7516ce55b99a8",
+                          "typeString": "literal_string \"ID sudah terverifikasi\""
+                        },
+                        "value": "ID sudah terverifikasi"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_c537c1bc4245deba9c9839fc69546b991160a3570d9180ad09e7516ce55b99a8",
+                          "typeString": "literal_string \"ID sudah terverifikasi\""
+                        }
+                      ],
+                      "id": 1999,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
+                      "referencedDeclaration": 4294967278,
+                      "src": "830:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 2008,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "830:66:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2009,
+                  "nodeType": "ExpressionStatement",
+                  "src": "830:66:1"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 2017,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1992,
+                            "src": "1068:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "id": 2018,
+                            "name": "ownerAddress",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1994,
+                            "src": "1095:12:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          {
+                            "id": 2019,
+                            "name": "txHash",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1996,
+                            "src": "1133:6:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          ],
+                          "id": 2016,
+                          "name": "HealthRecordVerification",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1970,
+                          "src": "1021:24:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_HealthRecordVerification_$1970_storage_ptr_$",
+                            "typeString": "type(struct VerificationHealthRecords.HealthRecordVerification storage pointer)"
+                          }
+                        },
+                        "id": 2020,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "nameLocations": [
+                          "1064:2:1",
+                          "1088:5:1",
+                          "1125:6:1"
+                        ],
+                        "names": [
+                          "id",
+                          "owner",
+                          "txHash"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "1021:133:1",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_HealthRecordVerification_$1970_memory_ptr",
+                          "typeString": "struct VerificationHealthRecords.HealthRecordVerification memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_HealthRecordVerification_$1970_memory_ptr",
+                          "typeString": "struct VerificationHealthRecords.HealthRecordVerification memory"
+                        }
+                      ],
+                      "expression": {
+                        "expression": {
+                          "baseExpression": {
+                            "id": 2010,
+                            "name": "senderVerifications",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1984,
+                            "src": "957:19:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_SenderVerification_$1975_storage_$",
+                              "typeString": "mapping(address => struct VerificationHealthRecords.SenderVerification storage ref)"
+                            }
+                          },
+                          "id": 2013,
+                          "indexExpression": {
+                            "expression": {
+                              "id": 2011,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 4294967281,
+                              "src": "977:3:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 2012,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "981:6:1",
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "src": "977:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "957:31:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_SenderVerification_$1975_storage",
+                            "typeString": "struct VerificationHealthRecords.SenderVerification storage ref"
+                          }
+                        },
+                        "id": 2014,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "989:13:1",
+                        "memberName": "verifications",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1974,
+                        "src": "957:45:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_HealthRecordVerification_$1970_storage_$dyn_storage",
+                          "typeString": "struct VerificationHealthRecords.HealthRecordVerification storage ref[] storage ref"
+                        }
+                      },
+                      "id": 2015,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1003:4:1",
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "957:50:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_HealthRecordVerification_$1970_storage_$dyn_storage_ptr_$_t_struct$_HealthRecordVerification_$1970_storage_$returns$__$attached_to$_t_array$_t_struct$_HealthRecordVerification_$1970_storage_$dyn_storage_ptr_$",
+                        "typeString": "function (struct VerificationHealthRecords.HealthRecordVerification storage ref[] storage pointer,struct VerificationHealthRecords.HealthRecordVerification storage ref)"
+                      }
+                    },
+                    "id": 2021,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "957:207:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2022,
+                  "nodeType": "ExpressionStatement",
+                  "src": "957:207:1"
+                },
+                {
+                  "expression": {
+                    "id": 2030,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "baseExpression": {
+                          "id": 2023,
+                          "name": "isVerification",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1990,
+                          "src": "1175:14:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_string_memory_ptr_$_t_bool_$_$",
+                            "typeString": "mapping(address => mapping(string memory => bool))"
+                          }
+                        },
+                        "id": 2027,
+                        "indexExpression": {
+                          "expression": {
+                            "id": 2024,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967281,
+                            "src": "1190:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 2025,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "1194:6:1",
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "1190:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1175:26:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bool_$",
+                          "typeString": "mapping(string memory => bool)"
+                        }
+                      },
+                      "id": 2028,
+                      "indexExpression": {
+                        "id": 2026,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1992,
+                        "src": "1202:2:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1175:30:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "74727565",
+                      "id": 2029,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1208:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1175:37:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2031,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1175:37:1"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 2033,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967281,
+                          "src": "1258:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 2034,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1262:6:1",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1258:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 2032,
+                      "name": "AddedHealthRecordVerification",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1979,
+                      "src": "1228:29:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 2035,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1228:41:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2036,
+                  "nodeType": "EmitStatement",
+                  "src": "1223:46:1"
+                }
+              ]
+            },
+            "functionSelector": "2221f89b",
+            "id": 2038,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addVerification",
+            "nameLocation": "704:15:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1997,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1992,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "743:2:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2038,
+                  "src": "729:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1991,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "729:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1994,
+                  "mutability": "mutable",
+                  "name": "ownerAddress",
+                  "nameLocation": "764:12:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2038,
+                  "src": "756:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1993,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "756:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1996,
+                  "mutability": "mutable",
+                  "name": "txHash",
+                  "nameLocation": "800:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2038,
+                  "src": "786:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1995,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "786:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "719:93:1"
+            },
+            "returnParameters": {
+              "id": 1998,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "820:0:1"
+            },
+            "scope": 2073,
+            "src": "695:581:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2053,
+              "nodeType": "Block",
+              "src": "1418:51:1",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "baseExpression": {
+                        "id": 2047,
+                        "name": "isVerification",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1990,
+                        "src": "1435:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_string_memory_ptr_$_t_bool_$_$",
+                          "typeString": "mapping(address => mapping(string memory => bool))"
+                        }
+                      },
+                      "id": 2049,
+                      "indexExpression": {
+                        "id": 2048,
+                        "name": "creator",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2042,
+                        "src": "1450:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1435:23:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bool_$",
+                        "typeString": "mapping(string memory => bool)"
+                      }
+                    },
+                    "id": 2051,
+                    "indexExpression": {
+                      "id": 2050,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2040,
+                      "src": "1459:2:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1435:27:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 2046,
+                  "id": 2052,
+                  "nodeType": "Return",
+                  "src": "1428:34:1"
+                }
+              ]
+            },
+            "functionSelector": "a506b4f2",
+            "id": 2054,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkIsVerification",
+            "nameLocation": "1336:19:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2043,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2040,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "1370:2:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2054,
+                  "src": "1356:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2039,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1356:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2042,
+                  "mutability": "mutable",
+                  "name": "creator",
+                  "nameLocation": "1382:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2054,
+                  "src": "1374:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2041,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1374:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1355:35:1"
+            },
+            "returnParameters": {
+              "id": 2046,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2045,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2054,
+                  "src": "1412:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2044,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1412:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1411:6:1"
+            },
+            "scope": 2073,
+            "src": "1327:142:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "ea444dd7122a2566183a7902fbb509c213d7483f822bb6b81bbf91381565c7e9",
+            "id": 2060,
+            "name": "SendTest",
+            "nameLocation": "1528:8:1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2059,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2056,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "creator",
+                  "nameLocation": "1545:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2060,
+                  "src": "1537:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2055,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1537:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2058,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "message",
+                  "nameLocation": "1561:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2060,
+                  "src": "1554:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2057,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1554:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1536:33:1"
+            },
+            "src": "1522:48:1"
+          },
+          {
+            "body": {
+              "id": 2071,
+              "nodeType": "Block",
+              "src": "1635:51:1",
+              "statements": [
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 2066,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967281,
+                          "src": "1659:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 2067,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1663:6:1",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1659:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 2068,
+                        "name": "message",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2062,
+                        "src": "1671:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 2065,
+                      "name": "SendTest",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2060,
+                      "src": "1650:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (address,string memory)"
+                      }
+                    },
+                    "id": 2069,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1650:29:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2070,
+                  "nodeType": "EmitStatement",
+                  "src": "1645:34:1"
+                }
+              ]
+            },
+            "functionSelector": "f567ac7f",
+            "id": 2072,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testSendTransaction",
+            "nameLocation": "1585:19:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2063,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2062,
+                  "mutability": "mutable",
+                  "name": "message",
+                  "nameLocation": "1619:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2072,
+                  "src": "1605:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2061,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1605:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1604:23:1"
+            },
+            "returnParameters": {
+              "id": 2064,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1635:0:1"
+            },
+            "scope": 2073,
+            "src": "1576:110:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2074,
+        "src": "58:1630:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1657:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.19+commit.7dd6d404.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2025-06-10T07:00:45.697Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

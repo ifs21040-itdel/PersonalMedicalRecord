@@ -1,0 +1,34 @@
+2025/06/18-16:04:51.164 615c Recovering log #189
+2025/06/18-16:04:51.166 615c Level-0 table #192: started
+2025/06/18-16:04:51.174 615c Level-0 table #192: 165429 bytes OK
+2025/06/18-16:04:51.182 615c Delete type=0 #189
+2025/06/18-16:04:51.182 615c Delete type=3 #165
+2025/06/18-16:05:19.623 3db0 Compacting 2@0 + 5@1 files
+2025/06/18-16:05:19.667 3db0 Generated table #194@0: 5729 keys, 2125143 bytes
+2025/06/18-16:05:19.726 3db0 Generated table #195@0: 5714 keys, 2123720 bytes
+2025/06/18-16:05:19.783 3db0 Generated table #196@0: 5662 keys, 2124145 bytes
+2025/06/18-16:05:19.836 3db0 Generated table #197@0: 5368 keys, 2123784 bytes
+2025/06/18-16:05:19.907 3db0 Generated table #198@0: 10096 keys, 2129567 bytes
+2025/06/18-16:05:19.914 3db0 Generated table #199@0: 138 keys, 164244 bytes
+2025/06/18-16:05:19.915 3db0 Compacted 2@0 + 5@1 files => 10790603 bytes
+2025/06/18-16:05:19.915 3db0 compacted to: files[ 0 6 8 0 0 0 0 ]
+2025/06/18-16:05:19.916 3db0 Delete type=2 #181
+2025/06/18-16:05:19.917 3db0 Delete type=2 #182
+2025/06/18-16:05:19.918 3db0 Delete type=2 #183
+2025/06/18-16:05:19.919 3db0 Delete type=2 #185
+2025/06/18-16:05:19.920 3db0 Delete type=2 #186
+2025/06/18-16:05:19.921 3db0 Delete type=2 #190
+2025/06/18-16:05:19.922 3db0 Delete type=2 #192
+2025/06/18-16:05:19.922 3db0 Compacting 1@1 + 4@2 files
+2025/06/18-16:05:19.970 3db0 Generated table #200@1: 5913 keys, 2127537 bytes
+2025/06/18-16:05:20.021 3db0 Generated table #201@1: 5879 keys, 2123802 bytes
+2025/06/18-16:05:20.064 3db0 Generated table #202@1: 5889 keys, 2128015 bytes
+2025/06/18-16:05:20.108 3db0 Generated table #203@1: 5914 keys, 2125918 bytes
+2025/06/18-16:05:20.150 3db0 Generated table #204@1: 4676 keys, 1864661 bytes
+2025/06/18-16:05:20.150 3db0 Compacted 1@1 + 4@2 files => 10369933 bytes
+2025/06/18-16:05:20.150 3db0 compacted to: files[ 0 5 9 0 0 0 0 ]
+2025/06/18-16:05:20.150 3db0 Delete type=2 #174
+2025/06/18-16:05:20.151 3db0 Delete type=2 #175
+2025/06/18-16:05:20.151 3db0 Delete type=2 #187
+2025/06/18-16:05:20.153 3db0 Delete type=2 #188
+2025/06/18-16:05:20.154 3db0 Delete type=2 #197
